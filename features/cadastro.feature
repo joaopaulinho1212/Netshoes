@@ -4,14 +4,14 @@ Funcionalidade: Cadastro de cliente
     Para que um cliente possa fazer suas compras
     Sendo um cliente não cadastrado 
     Posso fezer um cadastro
-@caduser
 
+@cadusuario
 Cenario: Cadastrando usuarios
     Dado que um cliente informe seu email "joaopaulo@netshoes.com"
     Então deve preecher o campo nome "Joao Paulo" e sobrenome com "Socorro Lima"
     E deve escolher o genero 
     E deve escolher a data de aniversario 
-    E deve preecher o CPF "40755312015"
+    E deve preecher o CPF "17289943066"
     E deve preecher o CEP "04180112"
     E deve preecher o numero "123"
     E deve preecher o complemento "AP03"

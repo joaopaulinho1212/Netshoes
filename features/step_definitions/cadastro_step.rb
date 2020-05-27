@@ -3,10 +3,11 @@
 
 Dado("que um cliente informe seu email {string}") do |email|
     visit "/login"
-    find("#sign-up-username").set email
+    value = ""; 2.times { value << (65 + rand(25)).chr }  
+    find("#sign-up-username").set value + email
     click_button "Prosseguir"
     sleep 3
-
+    
 end
 
 Então("deve preecher o campo nome {string} e sobrenome com {string}") do |name, lastname|
@@ -26,7 +27,6 @@ end
 
 Então("deve preecher o CPF {string}") do |cpf|
       find("#cpf").set cpf
-end
 
 Então("deve preecher o CEP {string}") do |zipcode|
       find("#address-zipcode").set zipcode  

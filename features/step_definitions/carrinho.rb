@@ -69,3 +69,50 @@ Quando("seleciono o meu tamanho") do
     find(:xpath, "(//a[@class='product-item'][contains(.,'39')])[1]").click
     sleep 3
 end
+
+#Removendo Itens
+Dado("que desejo remover um item do carrinho") do
+    visit "/login"
+    find("#username").set "joaopaulo@netshoes.com"
+    find("#password").set "pwd123"
+    find("#login-button").click
+    sleep 2
+    find(".navbar__hamburger").click
+    sleep 2
+    find("[class='navbar__dropdown--thumb-item is-active']").hover
+    sleep 2
+    find(:xpath, "(//a[@title='Tênis'])[1]").click
+    sleep 2
+    find('a[class="item-card__images__image-link"][title="Tênis Adidas Lite Racer Cln Masculino"]').click
+    sleep 2
+    find(:xpath, "(//a[@class='product-item'][contains(.,'38')])[1]").click
+
+    click_button "Comprar"
+    sleep 2
+end
+  
+Então("clico no icone de lixeira") do   
+    find(:xpath, "(//i[contains(@role,'button')])[2]").click
+    sleep 2
+end
+
+
+#Checkout
+
+Dado("que desejo fazer o checkout do meu item") do
+        visit "/login"
+    find("#username").set "joaopaulo@netshoes.com"
+    find("#password").set "pwd123"
+    find("#login-button").click
+    sleep 3
+    find(:xpath, "//a[@href='/cart']").click 
+    sleep 3
+end
+  
+  Então("clico em continuar") do
+    find(:xpath, "//a[@qa-auto='cart-buy-button']").click
+  end
+
+  Então("devo ver o texto {string}") do |text|
+   expect(page).to have_text text
+  end
