@@ -11,7 +11,7 @@ Cenario: Cadastrando usuarios
     Então deve preecher o campo nome "Joao Paulo" e sobrenome com "Socorro Lima"
     E deve escolher o genero 
     E deve escolher a data de aniversario 
-    E deve preecher o CPF "17289943066"
+    E deve preecher o CPF
     E deve preecher o CEP "04180112"
     E deve preecher o numero "123"
     E deve preecher o complemento "AP03"

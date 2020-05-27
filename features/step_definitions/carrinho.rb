@@ -11,7 +11,7 @@ Então("seleciono a categoria tênis") do
     find(:xpath, "(//a[@title='Tênis'])[1]").click
 end
                                                            
-                                                                               
+#Adicionando ao Carrinho
 Dado("que ja tenho um item selecionado") do                                   
     visit "/"
     find(".navbar__hamburger").click

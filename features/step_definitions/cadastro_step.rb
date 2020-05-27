@@ -25,8 +25,9 @@ Então("deve escolher a data de aniversario") do
       find("#dateofbirth-year").set "2001"
 end
 
-Então("deve preecher o CPF {string}") do |cpf|
-      find("#cpf").set cpf
+Então("deve preecher o CPF") do 
+      find("#cpf").set CPF.generate
+end
 
 Então("deve preecher o CEP {string}") do |zipcode|
       find("#address-zipcode").set zipcode  
