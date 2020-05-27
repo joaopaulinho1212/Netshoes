@@ -14,7 +14,7 @@
         Dado que ja tenho um item selecionado
         Quando seleciono meu tamanho
         Então clico em comprar
-     @choose
+ 
     Cenario: Adicionando mais um item ao carrinho
         Dado que já tenha um item no carrinho 
         E desejo adicionar mais um item
@@ -24,7 +24,7 @@
         E que escolho o tenis 
         Quando seleciono o meu tamanho
         Então clico em comprar
-    
+    @choose
     Cenario: Removendo um item
         Dado que desejo remover um item do carrinho
         Então clico no icone de lixeira
