@@ -1,6 +1,4 @@
 
-
-
 Dado("que um cliente informe seu email {string}") do |email|
     visit "/login"
     value = ""; 2.times { value << (65 + rand(25)).chr }  
@@ -55,4 +53,7 @@ end
 
 Então("devo clicar no botão continuar") do
   find(".button").click
+  user = find("#username-logged").text
+  expect(user).to eql "Joao Paulo"
+  sleep 2
 end

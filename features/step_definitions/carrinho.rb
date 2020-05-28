@@ -9,6 +9,8 @@ Então("seleciono a categoria tênis") do
 
     find("[class='navbar__dropdown--thumb-item is-active']").hover
     find(:xpath, "(//a[@title='Tênis'])[1]").click
+    msn = find(".search-query").text
+    expect(msn).to eql "TÊNIS MASCULINO"
 end
                                                            
 #Adicionando ao Carrinho
@@ -23,10 +25,15 @@ end
 
 Quando("seleciono meu tamanho") do
     find(:xpath, "(//a[@class='product-item'][contains(.,'40')])[1]").click
-  end
+    
+
+end
 
   
 Então("clico em comprar") do
+    buy = find(".features-title").text
+    expect(buy).to eql "Descrição"
+    sleep 2
     click_button "Comprar"
 end                           
 

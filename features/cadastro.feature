@@ -3,7 +3,7 @@
 Funcionalidade: Cadastro de cliente
     Para que um cliente possa fazer suas compras
     Sendo um cliente não cadastrado 
-    Posso fezer um cadastro
+    Pode fezer um cadastro
 
 @cadusuario
 Cenario: Cadastrando usuarios
