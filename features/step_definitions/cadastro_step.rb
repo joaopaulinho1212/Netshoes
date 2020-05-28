@@ -20,9 +20,9 @@ Então("deve escolher o genero") do
 end
 
 Então("deve escolher a data de aniversario") do
-      find("#dateofbirth-day").set "17"
-      find("#dateofbirth-month").set "Mar"
-      find("#dateofbirth-year").set "2001"
+      select "17",   from:"dateofbirth-day"
+      select "Mar",  from:"dateofbirth-month"
+      select "2001", from:"dateofbirth-year"
 end
 
 Então("deve preecher o CPF") do 
