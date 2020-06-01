@@ -1,5 +1,5 @@
 #language: pt
-
+@total
      Funcionalidade: Selecionando o produto
         Para que um cliente possa fazer suas compras
         Sendo um cliente já cadastrado
